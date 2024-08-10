@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:jpa  # In-memory H2 database
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true   # Enables H2 console for web access
+      path: /h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # Automatically create/update schema
+    show-sql: true      # Show SQL statements in logs
+    properties:
+      hibernate:
+        format_sql: true  # Format SQL statements
+
+## Logging configuration
+#logging:
+#  level:
+#    root: INFO              # Root logging level
+#    org.springframework: DEBUG  # Logging level for Spring framework classes
+#    com.yourcompany: DEBUG  # Logging level for your application's package
+#  file:
+#    name: myapp.log         # Log file name
+#    path: /var/log/myapp    # Log file path
+#
+## Custom settings
+#myapp:
+#  custom-property: value  # Example of custom application property
